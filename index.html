@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Terms of Use for MyDoser — Frequency App. Subscriptions, one-time unlocks, and wellness disclaimer.">
+<title>Terms of Use — MyDoser</title>
+<style>
+  :root {
+    --bg: #0B0B1A;
+    --grad-a: #4A00E0;
+    --grad-b: #8E2DE2;
+    --text: #EDEAF7;
+    --muted: rgba(237, 234, 247, 0.65);
+    --faint: rgba(237, 234, 247, 0.45);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.10);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.32;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .glow-1 { width: 520px; height: 520px; top: -180px; left: -140px; background: var(--grad-a); }
+  .glow-2 { width: 460px; height: 460px; top: 28%; right: -180px; background: var(--grad-b); }
+  .glow-3 { width: 420px; height: 420px; bottom: -160px; left: 22%; background: #2A0A6E; }
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 20px 40px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: #C9B8FF;
+    background: rgba(142, 45, 226, 0.16);
+    border: 1px solid rgba(142, 45, 226, 0.38);
+    border-radius: 999px;
+    padding: 6px 16px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(2rem, 6vw, 2.9rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    background: linear-gradient(100deg, #FFFFFF 10%, #C9B8FF 60%, #8E2DE2 110%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+  .meta { color: var(--faint); font-size: 0.92rem; margin-bottom: 36px; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 28px 28px;
+    margin-bottom: 20px;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30);
+  }
+  .card h2 {
+    font-size: 1.18rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+  }
+  .card h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px; height: 28px;
+    margin-right: 10px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    border-radius: 9px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+    vertical-align: -6px;
+  }
+  .card h3 { font-size: 1rem; font-weight: 700; color: #FFFFFF; margin: 16px 0 8px; }
+  .card p { color: var(--muted); margin-bottom: 12px; }
+  .card p:last-child { margin-bottom: 0; }
+  .card ul { color: var(--muted); padding-left: 22px; margin-bottom: 12px; }
+  .card ul:last-child { margin-bottom: 0; }
+  .card li { margin-bottom: 8px; }
+  .card li:last-child { margin-bottom: 0; }
+  .card strong { color: var(--text); font-weight: 600; }
+  a { color: #B08CFF; text-decoration: none; }
+  a:hover { color: #D4BEFF; text-decoration: underline; }
+  .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
+  .price-tile {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 18px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .price-tile .plan { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #C9B8FF; margin-bottom: 4px; }
+  .price-tile .price { font-size: 1.45rem; font-weight: 800; color: #fff; }
+  .price-tile .per { font-size: 0.85rem; color: var(--faint); }
+  .disclaimer-card {
+    background: linear-gradient(135deg, rgba(74, 0, 224, 0.25), rgba(142, 45, 226, 0.16));
+    border: 1px solid rgba(142, 45, 226, 0.45);
+  }
+  .email-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 13px 28px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff !important;
+    background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+    box-shadow: 0 8px 24px rgba(106, 17, 226, 0.45);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .email-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(106, 17, 226, 0.60); text-decoration: none; }
+  footer {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    color: var(--faint);
+    font-size: 0.9rem;
+  }
+  footer .brand { font-weight: 700; color: var(--muted); margin-bottom: 6px; }
+  footer .links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; }
+  @media (max-width: 600px) {
+    .wrap { padding: 40px 16px 32px; }
+    .card { padding: 22px 18px; border-radius: 16px; }
+    .price-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="glow glow-3"></div>
+
+<main class="wrap">
+  <span class="badge">MyDoser — Frequency App</span>
+  <h1>Terms of Use</h1>
+  <p class="meta">Effective date: June 12, 2026</p>
+
+  <section class="card">
+    <h2><span class="num">1</span>Agreement to These Terms</h2>
+    <p>These Terms of Use ("Terms") govern your use of the <strong>MyDoser — Frequency App</strong> mobile application ("MyDoser", the "App"). By downloading or using the App you agree to these Terms. If you do not agree, please do not use the App.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">2</span>License to Use the App</h2>
+    <p>We grant you a personal, limited, non-exclusive, non-transferable, revocable license to use MyDoser on Apple-branded devices that you own or control, for your personal, non-commercial use, in accordance with these Terms and Apple's App Store terms. You may not copy, modify, distribute, sell, reverse engineer, or create derivative works of the App or its content.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">3</span>Subscriptions — MyDoser Premium</h2>
+    <p>MyDoser Premium unlocks the full frequency library and is offered as an auto-renewing subscription billed through your Apple ID:</p>
+    <div class="price-grid">
+      <div class="price-tile">
+        <div class="plan">Weekly</div>
+        <div class="price">$4.99</div>
+        <div class="per">per week, auto-renewing</div>
+      </div>
+      <div class="price-tile">
+        <div class="plan">Yearly</div>
+        <div class="price">$39.99</div>
+        <div class="per">per year, auto-renewing</div>
+      </div>
+    </div>
+    <ul>
+      <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
+      <li>The subscription <strong>automatically renews</strong> unless it is canceled at least <strong>24 hours before the end of the current period</strong>.</li>
+      <li>Your account is charged for renewal <strong>within 24 hours prior to the end of the current period</strong>, at the price of the plan you chose.</li>
+      <li>You can manage or cancel your subscription at any time in your <strong>App Store account settings</strong> (Settings → your name → Subscriptions). Cancellation takes effect at the end of the current billing period.</li>
+      <li>Prices may vary by region and are shown in the App Store at the time of purchase. Any unused portion of a free trial period, if offered, is forfeited when you purchase a subscription.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">4</span>One-Time Single-Frequency Unlock</h2>
+    <p>You may purchase a <strong>one-time unlock for a single frequency at $1.49</strong>. Please note:</p>
+    <ul>
+      <li>This is a <strong>one-time consumable purchase</strong>, not a subscription — it does not renew.</li>
+      <li>The unlock applies <strong>on the purchasing device only</strong> and lasts for <strong>7 days</strong> from purchase, after which it expires.</li>
+      <li>As a consumable, it is <strong>non-refundable and cannot be restored</strong> through Apple's "Restore Purchases" mechanism, including after reinstalling the App or switching devices.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">5</span>Free Daily Frequency</h2>
+    <p>MyDoser offers one designated frequency that can be claimed for free for a 24-hour listening window. The free claim renews 24 hours after each claim. The selection of the free frequency, the claim window, and the availability of this feature may change or be discontinued at any time without notice. The free daily frequency does not grant access to any other content.</p>
+  </section>
+
+  <section class="card disclaimer-card">
+    <h2><span class="num">6</span>Medical Disclaimer — Please Read</h2>
+    <p><strong>MyDoser is intended for relaxation and general wellness purposes only.</strong> The frequencies, binaural beats, and tones in the App are provided to support rest, focus, and a sense of calm. They are not medical treatments.</p>
+    <ul>
+      <li>The App makes <strong>no medical claims</strong> of any kind and is not intended to diagnose any condition.</li>
+      <li>The App is <strong>not a substitute for professional medical care</strong>, advice, or therapy. Always seek the advice of a qualified health professional with any questions regarding a medical condition.</li>
+      <li>If you have <strong>epilepsy, a history of seizures, or any hearing condition</strong>, consult a doctor before using the App.</li>
+      <li>Listen at a <strong>reasonable volume</strong>. Prolonged listening at high volume may be uncomfortable or harmful to hearing.</li>
+      <li>Do not use the App in situations requiring full attention, such as driving or operating machinery, if it may make you drowsy.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">7</span>Intellectual Property</h2>
+    <p>The App and all of its content — including audio compositions, frequency presets, designs, graphics, text, logos, and software — are owned by us or our licensors and are protected by copyright and other intellectual property laws. Except for the limited license granted above, no rights are transferred to you. You may not extract, redistribute, or publicly perform the App's audio content.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">8</span>Termination</h2>
+    <p>We may suspend or terminate your access to the App at any time if you breach these Terms or misuse the App. You may stop using the App at any time by deleting it. Sections that by their nature should survive termination (including the medical disclaimer, intellectual property, and governing law sections) will survive.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">9</span>Changes to the App and These Terms</h2>
+    <p>We may update, change, or discontinue features of the App, and we may revise these Terms from time to time. The effective date above reflects the latest version. Continued use of the App after changes take effect constitutes acceptance of the revised Terms.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">10</span>Disclaimer of Warranties &amp; Limitation of Liability</h2>
+    <p>The App is provided "as is" and "as available", without warranties of any kind, express or implied. To the maximum extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of, or inability to use, the App.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">11</span>Governing Law</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of the <strong>Republic of Turkey</strong>, without regard to conflict-of-law principles. Any disputes arising from these Terms or the App shall be subject to the jurisdiction of the competent courts of Turkey, to the extent permitted by applicable consumer protection law in your place of residence.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">12</span>Contact</h2>
+    <p>Questions about these Terms? We're happy to help.</p>
+    <a class="email-btn" href="mailto:etsyhmet@gmail.com">etsyhmet@gmail.com</a>
+  </section>
+
+  <footer>
+    <div class="brand">MyDoser — Frequency App</div>
+    <div>Contact: <a href="mailto:etsyhmet@gmail.com">etsyhmet@gmail.com</a></div>
+    <div class="links">
+      <a href="https://mericdegirmencioglu.github.io/mydoser-privacy-policy/">Privacy Policy</a>
+      <a href="https://mericdegirmencioglu.github.io/mydoser-contact-support/">Support</a>
+      <a href="https://mericdegirmencioglu.github.io/mydoser-marketing/">About MyDoser</a>
+    </div>
+  </footer>
+</main>
+</body>
+</html>
